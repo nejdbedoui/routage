@@ -3,17 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "HachanaSaifTP3": {
+    "nejdtp3": {
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "sai",
+      "prefix": "nej",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/HachanaSaifTP3",
+            "outputPath": "dist/nejdtp3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "HachanaSaifTP3:build"
+            "browserTarget": "nejdtp3:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "HachanaSaifTP3:build:production"
+              "browserTarget": "nejdtp3:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "HachanaSaifTP3:build"
+            "browserTarget": "tp3:build"
           }
         },
         "test": {
@@ -112,15 +112,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "HachanaSaifTP3:serve"
+            "devServerTarget": "nejdtp3:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "HachanaSaifTP3:serve:production"
+              "devServerTarget": "nejdtp3:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "HachanaSaifTP3"
+  "defaultProject": "nejdtp3"
 }

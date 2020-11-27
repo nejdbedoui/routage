@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Materiel } from 'src/app/models/materiel';
 
 @Component({
-  selector: 'sai-listmateriel',
+  selector: 'nej-listmateriel',
   templateUrl: './listmateriel.component.html',
   styleUrls: ['./listmateriel.component.css']
 })
 export class ListmaterielComponent implements OnInit {
-  materiels=[
+  materiels:Materiel[]=[
     {
         id: '1',
         libelle: 'Ecran',
