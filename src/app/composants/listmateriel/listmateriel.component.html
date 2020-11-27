@@ -1,12 +1,15 @@
-<h2>
+<h2 class="text-center">
     Nos produits en informatique
 </h2>
-<ul>
-    <ng-container *ngFor="let t of materiels">
-<li *ngIf="t.quantite >0">
-<nej-materiel [m]="t"></nej-materiel>
- 
-</li>
-    </ng-container>
+<div class="container">
+    <div class="row"><ng-container *ngFor="let t of materiels">
+        <div class="col-4" *ngIf="t.quantite >0">
+        <nej-materiel [m]="t"></nej-materiel>
+         
+        </div>
+            </ng-container></div>
+    
+        
+</div>
 
-</ul>
+  
