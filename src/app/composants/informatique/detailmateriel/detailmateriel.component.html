@@ -1,10 +1,10 @@
 <h1> Detail de {{materiel.libelle}} {{materiel.id}}</h1>
 <ul class="list-group"> 
     <li class="list-group-item"><img [src]="materiel.photo" ></li>
-    <li class="list-group-item"> marque {{materiel.marque}} </li>
-    <li class="list-group-item"> prix {{materiel.prix}} </li>
-    <li class="list-group-item"> description {{materiel.description}}</li>
-    <li class="list-group-item"> quantite {{materiel.quantite}}</li>
-    <li class="list-group-item"> <input type="checkbox" [checked] ="materiel.hautGamme"> hout de gamme </li>
+    <li class="list-group-item"> marque :{{materiel.marque}} </li>
+    <li class="list-group-item"> prix :{{materiel.prix}} </li>
+    <li class="list-group-item"> description :{{materiel.description}}</li>
+    <li class="list-group-item"> quantite :{{materiel.quantite}}</li>
+    <li class="list-group-item"> <input type="checkbox" [checked] ="materiel.hautGamme" disabled> hautgamme </li>
     <a class="btn btn-primary"> afficher les commentaires</a>
 </ul>

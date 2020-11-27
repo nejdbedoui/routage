@@ -17,6 +17,7 @@ import { DetailmaterielComponent } from './composants/informatique/detailmaterie
     MaterielComponent,
     DetailmaterielComponent,
     
+    
   ],
   imports: [
     BrowserModule,
