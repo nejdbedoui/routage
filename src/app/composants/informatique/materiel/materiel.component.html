@@ -2,16 +2,16 @@
 
 <div class="card text-center">
     <div class="card-header">
-        {{t.libelle |titlecase}}
+        {{mat.libelle |titlecase}}
     </div>
     <div class="card-body">
-        <img [src]="t.photo" alt="photo">
+        <img [src]="mat.photo" alt="photo">
 <br>
         <span class="badge badge-pill "
-            [ngClass]="{'badge-primary':t.hautGamme,
-                        'badge-dark':!t.hautGamme}">
-            Prix : {{t.prix}} DT
-            <i [ngClass]="{'fa fa-thumbs-up': t.hautGamme}"></i>
+            [ngClass]="{'badge-primary':mat.hautGamme,
+                        'badge-dark':!mat.hautGamme}">
+            Prix : {{mat.prix}} DT
+            <i [ngClass]="{'fa fa-thumbs-up': mat.hautGamme}"></i>
         </span>
     </div>
     <div class="card-footer text-muted">

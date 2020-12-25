@@ -1,5 +1,5 @@
-import { Commentaire }
-from './commentaire';
+import { Commentaire } from "./commentaire";
+
 export class Materiel {
  id:string;
  libelle:string;
@@ -10,4 +10,5 @@ export class Materiel {
  hautGamme: boolean;
  quantite: number;
  commentaires: Commentaire[];
+ constructor() { }
 }
