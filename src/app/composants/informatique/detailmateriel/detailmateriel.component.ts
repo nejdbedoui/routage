@@ -7,6 +7,7 @@ import { Materiel } from 'src/app/models/materiel';
   styleUrls: ['./detailmateriel.component.css']
 })
 export class DetailmaterielComponent implements OnInit {
+  afficher:boolean =false;
   materiel:Materiel ={
     id: '2',
     libelle: 'PC',
@@ -22,7 +23,10 @@ export class DetailmaterielComponent implements OnInit {
    2020,10,4)}]
    };
 
-
+/*
+onClick(){
+  this.afficher = !this.afficher;
+}*/
 
 
   constructor() { }

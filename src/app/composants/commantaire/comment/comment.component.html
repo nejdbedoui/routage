@@ -1,1 +1,11 @@
-<p>comment works!</p>
+<ul class="list-unstyled">
+    <li>Commentaire n° {{indice}} : {{comm.contenu}}</li>
+    <li>
+        {{comm.auteur}}
+        <span class="badge badge-primary"> {{comm.note}}</span>
+    </li>
+    <li>
+        {{comm.date | date:'dd/MM/yyyy'}}
+    </li>
+</ul>
+
