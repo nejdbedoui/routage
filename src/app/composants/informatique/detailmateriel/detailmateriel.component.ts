@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Materiel } from 'src/app/models/materiel';
+import { MaterielService } from 'src/app/services/materiel.service';
 
 @Component({
   selector: 'nej-detailmateriel',
@@ -8,30 +10,19 @@ import { Materiel } from 'src/app/models/materiel';
 })
 export class DetailmaterielComponent implements OnInit {
   afficher:boolean =false;
-  materiel:Materiel ={
-    id: '2',
-    libelle: 'PC',
-    photo:'assets/Images/Informatique/pcFixe.jpg',
-    marque: 'HP',
-    prix: 1780.6,
-    description: 'PC Portable très pratique',
-    hautGamme: false,
-    quantite: 5,
-    commentaires:[
-   {contenu:' satisfaisant', note:3, auteur:'Sami MRAD', date:new Date(2020,11,4)},
-   {contenu:'Bon rapport qualité prix', note:4, auteur:'Samar Salah', date:new Date(
-   2020,10,4)}]
-   };
-
-/*
+  identifiant:number;
 onClick(){
-  this.afficher = !this.afficher;
-}*/
+  this.afficher = !this.afficher;}
 
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+materiel: Materiel[] ; 
+constructor(private materielServices : MaterielService , private activatedRoute:ActivatedRoute) { }
+
+ngOnInit(): void {
+ this.materiel =  this.materielServices.getMateriels() ; 
+ this.identifiant = this.activatedRoute.snapshot.params['id'];
+}
 
 }
+

@@ -1,29 +1,30 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <h2>Détail du "{{materiel.libelle}}" d'Id : {{materiel.id}}</h2>
+            <h2>Détail du "{{materiel[identifiant-1].libelle}}" d'Id : {{materiel.id}}</h2>
             <ul class="list-group">
                 <li class="list-group-item">
-            <img [src]="materiel.photo" alt="photo">
+            <img [src]="materiel[identifiant-1].photo" alt="photo">
                 </li>
                 <li class="list-group-item">
-                    Marque : {{materiel.marque}}
+                    Marque : {{materiel[identifiant-1].marque}}
                 </li>
                 <li class="list-group-item">
-                    Prix {{materiel.prix}}
+                    Prix :{{materiel[identifiant-1].prix}}
                 </li>
                 <li class="list-group-item">
-                    Description {{materiel.description}}
+                    Description :{{materiel[identifiant-1].description}}
                 </li>
                 <li class="list-group-item">
-                    Quantité : {{materiel.quantite}}
+                    Quantité : {{materiel[identifiant-1].quantite}}
                 </li>
                 <li class="list-group-item">
-                    <input type="checkbox" disabled [checked]="materiel.hautGamme"> Haut de Gamme
+                    <input type="checkbox" disabled [checked]="materiel[identifiant-1].hautGamme"> Haut de Gamme
                 </li>
                 <li class="list-group-item">
                     <button type="button" class="btn btn-primary"
                      (click)="afficher = !afficher">Afficher les commentaires</button>
+                     <a routerLink='/informatique'><button type="button" class="btn btn-success">retour</button></a>
                 </li>
             </ul>
             
@@ -31,7 +32,7 @@
         <div class="col-6" *ngIf="afficher">
             <h2>Liste des commentaires</h2>
             <div *ngFor= "let c of materiel.commentaires; index as i">
-                <nej-comment [comm]="c" [indice]="i"></nej-comment>
+                <sai-comment [comm]="c" [indice]="i"></sai-comment>
             </div>
         </div>
     </div>
